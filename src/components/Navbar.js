@@ -10,11 +10,11 @@ const navigation = [
 
 const Navbar = () => {
   return (
-    <div className="h-full border border-xl">
+    <div className="h-full border border-x">
       <Disclosure as="nav" className="">
         {({ open }) => (
           <>
-            <div className="max-w-7xl mx-auto lg:px-8 sm:px-6 px-4 ">
+            <div className="max-w-7xl mx-auto lg:px-8 sm:px-6 px-4 sm:bg-white bg-gray-200">
               <div className="flex items-center justify-between h-16">
                 {/* Brand */}
                 <NavLink to="/" className="flex items-center bg-blue-storial px-2 py-1 rounded-md">
@@ -63,8 +63,8 @@ const Navbar = () => {
             </div>
 
             {/* Mobile Navigation */}
-            <Disclosure.Panel className="sm:hidden block">
-              <div className="pb-5 mt-4 px-2 shadow-md">
+            <Disclosure.Panel className="sm:hidden block bg-white">
+              <div className="pb-5 mt-2 px-2 shadow-md">
                 {navigation.map((nav) => (
                   <Disclosure.Button key={nav.name} as={NavLink} to={nav.path} className="text-blue-storial hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-xl font-medium text-center">
                     {nav.name}
