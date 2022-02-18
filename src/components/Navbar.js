@@ -26,7 +26,7 @@ const Navbar = () => {
                 {/* Search Input */}
                 <form className="items-center justify-center md:block hidden">
                   <div className="flex ">
-                    <input type="search" className="bg-gray-200 rounded-l-full border-2 pl-4 pr-2 py-2 lg:w-80 max-w-80 focus:outline-none focus:bg-white" placeholder="Search Book or Author" />
+                    <input type="search" className="bg-gray-200 rounded-l-full border-2 pl-4 pr-2 py-1 lg:w-80 max-w-80 focus:outline-none focus:bg-white" placeholder="Search Book or Author" />
                     <button className="flex items-center justify-center px-2 bg-gray-200 rounded-r-full ">
                       <SearchIcon className="h-6 w-6 text-gray-400" />
                     </button>
