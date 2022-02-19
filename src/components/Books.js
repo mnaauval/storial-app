@@ -1,6 +1,6 @@
 import { useGetAllBooksQuery } from "../redux/features/booksAPI";
 import { PlusCircleIcon } from "@heroicons/react/outline";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { addBookmarkItem } from "../redux/features/bookmarkSlice";
 
 const Books = ({ categoryId, page, size, value }) => {
