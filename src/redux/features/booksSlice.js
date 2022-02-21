@@ -7,9 +7,9 @@ const initialState = {
   error: null,
 };
 
-export const booksFetch = createAsyncThunk("books/booksFetch", async (dispatch, getState) => {
-  const response = await axios.get("fee-assessment-categories");
-  return response?.data;
+export const booksFetch = createAsyncThunk("books/booksFetch", async () => {
+  const response = await axios.get(`https://www.googleapis.com/books/v1/volumes?q=react&key=AIzaSyB19jw3uzc3oUeKRSSAWEUOYyy1_dmhI5M`);
+  return response?.data.items;
 });
 
 const booksSlice = createSlice({

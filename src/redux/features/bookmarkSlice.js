@@ -22,8 +22,8 @@ const bookmarkSlice = createSlice({
       localStorage.setItem("bookmarkItems", JSON.stringify(state.bookmarkItems));
     },
     removeBookmarkItem: (state, action) => {
-      const checkBookmarkItems = state.bookmarkItems.filter((item) => item.id !== action.payload.id);
-      state.bookmarkItems = checkBookmarkItems;
+      const checkBookmarkItem = state.bookmarkItems.filter((item) => item.id !== action.payload.id);
+      state.bookmarkItems = checkBookmarkItem;
       localStorage.setItem("bookmarkItems", JSON.stringify(state.bookmarkItems));
     },
     totalBookmarkItems(state) {

@@ -4,7 +4,8 @@ import { BookmarkIcon, XIcon, MenuIcon } from "@heroicons/react/outline";
 import { useSelector } from "react-redux";
 
 const navigation = [
-  { name: "Books", path: "/" },
+  // { name: "Books", path: "/" },
+  { name: "G-Books", path: "/" },
   { name: "About Us", path: "/about" },
 ];
 

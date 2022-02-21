@@ -8,6 +8,13 @@
 # testing
 /coverage
 
+# files
+/src/components/BooksList.js
+/src/redux/features/booksAPI.js
+/src/redux/features/booksSlice.js
+
+
+
 # production
 /build
 
