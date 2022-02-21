@@ -17,7 +17,7 @@ const Navbar = () => {
       <Disclosure as="nav" className="">
         {({ open }) => (
           <>
-            <div className="max-w-7xl mx-auto lg:px-8 sm:px-6 px-4 sm:bg-white bg-gray-200">
+            <div className="max-w-7xl mx-auto lg:px-8 sm:px-6 px-4 sm:bg-white bg-gray-200 sm:static fixed z-10 right-0 top-0 left-0">
               <div className="flex items-center justify-between h-16">
                 {/* Brand */}
                 <NavLink to="/" className="flex items-center bg-blue-storial px-2 py-1 rounded-md">
