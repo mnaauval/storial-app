@@ -1,6 +1,7 @@
 import { Disclosure } from "@headlessui/react";
 import { NavLink } from "react-router-dom";
-import { BookmarkIcon, XIcon, MenuIcon } from "@heroicons/react/outline";
+import { XIcon, MenuIcon } from "@heroicons/react/outline";
+import BookmarkBorderIcon from "@mui/icons-material/BookmarkBorder";
 import { useSelector } from "react-redux";
 
 const navigation = [
@@ -43,7 +44,7 @@ const Navbar = () => {
 
                   {/* Library */}
                   <NavLink to="/bookmark" className="flex items-center px-2">
-                    <BookmarkIcon className="w-7 h-7 text-blue-storial cursor-pointer" />
+                    <BookmarkBorderIcon className="w-7 h-7 text-blue-storial cursor-pointer" />
                     <span className="text-blue-storial bg-yellow-storial rounded-full px-1.5 text-sm font-bold">{bookmarkTotalQty}</span>
                   </NavLink>
 

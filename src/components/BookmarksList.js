@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { removeBookmarkItem, totalBookmarkItems } from "../redux/features/bookmarkSlice";
-import { ArrowLeftIcon, MinusCircleIcon } from "@heroicons/react/outline";
+import { ArrowLeftIcon } from "@heroicons/react/outline";
+import DeleteIcon from "@mui/icons-material/Delete";
 import { NavLink } from "react-router-dom";
 
 const BookmarksList = () => {
@@ -17,7 +18,7 @@ const BookmarksList = () => {
   };
 
   return (
-    <div className="text-center lg:px-8 sm:px-6 px-4">
+    <div className="text-center lg:px-8 sm:px-6 px-4 sm:mt-0 mt-20">
       <span className="block my-5 text-3xl font-medium text-gray-900">Favourite Books</span>
       {bookmark.bookmarkItems.length === 0 ? (
         <NavLink to="/" className="flex items-center justify-center hover:underline">
@@ -31,8 +32,8 @@ const BookmarksList = () => {
               <div className="flex flex-col items-center">
                 <div className="flex justify-center items-center relative transform ">
                   <div className="top-0 right-0 absolute">
-                    <button onClick={() => removeBookmarkHandler(gbook)} className="inline-flex rounded-bl-lg border-blue-storial border-l-2 border-b-2 border-t border-r bg-white text-center">
-                      <MinusCircleIcon className="h-6 w-6 text-blue-storial mx-2" />
+                    <button onClick={() => removeBookmarkHandler(gbook)} className="inline-flex py-1 rounded-bl-lg border-blue-storial border-l-2 border-b-2 border-t border-r bg-white text-center">
+                      <DeleteIcon className="h-6 w-6 text-blue-storial mx-2" />
                     </button>
                   </div>
                   <img src={gbook.volumeInfo.imageLinks.thumbnail} alt={gbook.volumeInfo.title} className="border-2 border-blue-storial h-[15rem] w-[12rem] transition-all" />
