@@ -1,4 +1,3 @@
-import { PlusCircleIcon } from "@heroicons/react/outline";
 import { useDispatch } from "react-redux";
 import { addBookmarkItem, removeBookmarkItem } from "../redux/features/bookmarkSlice";
 import BookmarkOutlinedIcon from "@mui/icons-material/BookmarkOutlined";
@@ -7,15 +6,15 @@ import { useState } from "react";
 
 const Books = ({ image, title, authors, data }) => {
   const dispatch = useDispatch();
-  const [bookmark, setBookmark] = useState(false);
+  const [getBookmark, setGetBookmark] = useState(false);
 
   const addBookmarkHandler = (data) => {
     dispatch(addBookmarkItem(data));
-    setBookmark(true);
+    setGetBookmark(true);
   };
   const removeBookmarkHandler = (data) => {
     dispatch(removeBookmarkItem(data));
-    setBookmark(false);
+    setGetBookmark(false);
   };
 
   // const filteredBooks = data?.filter((search) => search.title.toLowerCase().includes(value.toLowerCase()) || search.authors.toString().toLowerCase().includes(value.toLowerCase()));
@@ -24,7 +23,7 @@ const Books = ({ image, title, authors, data }) => {
       <div className="flex flex-col items-center">
         <div className="flex justify-center items-center relative transform ">
           <div className="top-0 right-0 absolute">
-            {bookmark ? (
+            {getBookmark ? (
               <button onClick={() => removeBookmarkHandler(data)} className="inline-flex py-1 rounded-bl-lg border-blue-storial border-l-2 border-b-2 border-t border-r bg-white text-center">
                 <BookmarkOutlinedIcon className="h-6 w-6 text-black mx-2" />
               </button>
