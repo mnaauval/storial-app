@@ -15,15 +15,10 @@ const GBooksList = () => {
     dispatch(totalBookmarkItems());
   }, [bookmark, dispatch]);
 
-  const searchClickHandler = (e) => {
+  const searchHandler = (e) => {
     e.preventDefault();
     setSearch(e.target.value);
-  };
-  const searchHandler = (e) => {
-    if (e.key === "Enter") {
-      e.preventDefault();
-      setSearch(e.target.value);
-    }
+    console.log(search);
   };
 
   return (
@@ -33,11 +28,11 @@ const GBooksList = () => {
           <span htmlFor="categories" className="block mb-2 text-md font-medium text-gray-900">
             Seach books
           </span>
-          <form onSubmit={searchClickHandler} className="flex items-center justify-center lg:px-8 sm:px-6 px-4">
-            <button type="submit" className="flex items-center justify-center px-2 bg-gray-100 rounded-l-full h-9 w-9">
+          <form className="flex items-center justify-center lg:px-8 sm:px-6 px-4">
+            <button className="flex items-center justify-center px-2 bg-gray-100 rounded-l-full h-9 w-9">
               <SearchIcon className="h-6 w-6 text-gray-900" />
             </button>
-            <input onKeyPress={searchHandler} type="search" className="bg-gray-100 rounded-r-full border-2 px-2 py-1 w-auto focus:outline-none focus:bg-white" placeholder="Search Book or Author" />
+            <input onChange={searchHandler} type="search" className="bg-gray-100 rounded-r-full border-2 px-2 py-1 w-auto focus:outline-none focus:bg-white" placeholder="Search Book or Author" />
           </form>
           <div className="grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 lg:gap-y-12 lg:gap-x-8 sm:gap-y-10 sm:gap-x-6 gap-y-6 md:my-10 my-6">
             {isLoading ? (
