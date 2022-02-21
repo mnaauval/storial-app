@@ -32,7 +32,7 @@ const GBooksList = () => {
             Seach books
           </span>
           <form onSubmit={submitHandler} className="flex items-center justify-center lg:px-8 sm:px-6 px-4">
-            <button className="flex items-center justify-center px-2 bg-gray-100 rounded-l-full h-9 w-9">
+            <button className="flex items-center justify-center border-2 px-2 bg-gray-100 rounded-l-full h-9 w-9">
               <SearchIcon className="h-6 w-6 text-gray-900" />
             </button>
             <input onChange={searchHandler} type="search" className="bg-gray-100 rounded-r-full border-2 px-2 py-1 w-auto focus:outline-none focus:bg-white" placeholder="Search Book or Author" />
