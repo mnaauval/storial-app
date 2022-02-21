@@ -15,6 +15,9 @@ const GBooksList = () => {
     dispatch(totalBookmarkItems());
   }, [bookmark, dispatch]);
 
+  const submitHandler = (e) => {
+    e.preventDefault();
+  };
   const searchHandler = (e) => {
     e.preventDefault();
     setSearch(e.target.value);
@@ -28,7 +31,7 @@ const GBooksList = () => {
           <span htmlFor="categories" className="block mb-2 text-md font-medium text-gray-900">
             Seach books
           </span>
-          <form className="flex items-center justify-center lg:px-8 sm:px-6 px-4">
+          <form onSubmit={submitHandler} className="flex items-center justify-center lg:px-8 sm:px-6 px-4">
             <button className="flex items-center justify-center px-2 bg-gray-100 rounded-l-full h-9 w-9">
               <SearchIcon className="h-6 w-6 text-gray-900" />
             </button>
